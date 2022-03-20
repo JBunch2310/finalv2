@@ -1,0 +1,39 @@
+[debug] [2022-03-19T01:08:28.951Z] ----------------------------------------------------------------------
+[debug] [2022-03-19T01:08:28.952Z] Command:       /opt/homebrew/Cellar/node/17.6.0/bin/node/opt/homebrew/bin/firebase serve --host 0.0.0.0
+[debug] [2022-03-19T01:08:28.952Z] CLI Version:   10.2.1
+[debug] [2022-03-19T01:08:28.952Z] Platform:      darwin
+[debug] [2022-03-19T01:08:28.952Z] Node Version:  v17.6.0
+[debug] [2022-03-19T01:08:28.955Z] Time:          Fri Mar 18 2022 21:08:28 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-03-19T01:08:28.955Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-19T01:08:28.994Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-19T01:08:28.994Z] > authorizing via signed-in user (jamiebunch2310@gmail.com)
+[debug] [2022-03-19T01:08:28.994Z] [iam] checking project bidding-bunch for permissions ["firebase.projects.get"]
+[debug] [2022-03-19T01:08:28.996Z] > refreshing access token with scopes: []
+[debug] [2022-03-19T01:08:28.996Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-19T01:08:29.166Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 19 Mar 2022 01:08:29 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-19T01:08:29.211Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bidding-bunch:testIamPermissions [none]
+[debug] [2022-03-19T01:08:29.211Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bidding-bunch:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-19T01:08:29.429Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bidding-bunch:testIamPermissions 200
+[debug] [2022-03-19T01:08:29.429Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bidding-bunch:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-19T01:08:29.430Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bidding-bunch [none]
+[debug] [2022-03-19T01:08:29.752Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bidding-bunch 200
+[debug] [2022-03-19T01:08:29.752Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bidding-bunch {"projectId":"bidding-bunch","projectNumber":"309856139276","displayName":"bidding-bunch final","name":"projects/bidding-bunch","resources":{"hostingSite":"bidding-bunch","realtimeDatabaseInstance":"bidding-bunch-default-rtdb","storageBucket":"bidding-bunch.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from '/Users/jamiebunch/CODE/final'...
+[info] 
+[debug] [2022-03-19T01:08:29.760Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/bidding-bunch/sites 
+[debug] [2022-03-19T01:08:29.886Z] AssertionError [ERR_ASSERTION]: Error: 'functions.source' is not defined
+    at new AssertionError (node:internal/assert/assertion_error:466:5)
+    at Object.assertDefined (/opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/lib/utils.js:366:15)
+    at FunctionsServer.start (/opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/lib/serve/functions.js:24:15)
+    at /opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/lib/serve/index.js:15:36
+    at arrayMap (/opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:653:23)
+    at Function.map (/opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9622:14)
+    at serve (/opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/lib/serve/index.js:14:25)
+    at Command.actionFn (/opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/lib/commands/serve.js:59:12)
+    at /opt/homebrew/Cellar/firebase-cli/10.2.1/libexec/lib/node_modules/firebase-tools/lib/command.js:190:25
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: An unexpected error has occurred.
